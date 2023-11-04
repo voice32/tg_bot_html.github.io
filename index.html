@@ -68,13 +68,44 @@
         button:hover {
             background: var(--tg-theme-secondary-bg-color);
         }
+
+        #form {
+            display:none;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            outline: none;
+            margin: 10px 5%;
+            padding: 15px 10px;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: #db5d5d;
+        }
     </style>
 </head>
 <body>
     <div id="main">
-        <h1>Select a store for displaying current discounts</h1>
-
-
+        <h1 id="window-header">Discounts</h1>
+        <p>Tap an item to put it in your shopping list.</p>
     </div>
+    <form id="form">
+        <input type="text" placeholder="text 1">
+        <button id="order">Order</button>
+    </form>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("order");
+
+        buy.addEventListener("click", () => {
+            return;
+        });
+    </script>
 </body>
 </html>
